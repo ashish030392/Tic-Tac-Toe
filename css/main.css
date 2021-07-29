@@ -1,0 +1,83 @@
+body{
+    background-image: url("../image/tic.jpg");
+    background-size: cover;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eeeeee;
+}
+
+#app{
+    border: 1px solid black;
+    width: 350px;
+    height: 350px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: auto;    
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    background-color: blue;
+}
+
+.header > * {
+    color: #eeeeee;
+}
+
+.header__turn{
+    padding: 12px;
+}
+
+.header__status{
+    padding: 12px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header__restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: none; 
+    cursor: pointer;
+    }
+
+.board {
+    display: grid;
+    background: #cccccc;
+    gap: 10px;
+    flex-grow: 1;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.board__tile{
+     background: white;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 80px;
+     font-family: 'Courier New', Courier, monospace;
+     color: black;
+}
+
+.board__tile:hover{
+    background: lightcyan;
+}
+
+.board__tile--winner {
+    color: red;
+}
